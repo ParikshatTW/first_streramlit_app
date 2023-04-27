@@ -23,6 +23,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
+ streamlit.dataframe(fruits_to_show)
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 streamlit.header("Fruityvice Fruit Advice!")
@@ -37,7 +39,7 @@ try:
     
 except URLError as e:
   streamlit.error()
-  streamlit.dataframe(fruits_to_show)
+ 
  #------------------------------------------------------------------------------------------------------------------------------------------------------------
 streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
